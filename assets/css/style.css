@@ -61,7 +61,7 @@ p { margin: 0 0 1em; }
 .hero__trust { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 10px; }
 .hero__trust li { border: 1px solid rgba(255, 255, 255, .18); border-radius: 999px; padding: .35em 1em; font-size: .82rem; color: rgba(255, 255, 255, .75); letter-spacing: .04em; }
 .hero__photo { position: relative; justify-self: center; max-width: 400px; width: 100%; }
-.photo-frame { position: relative; border-radius: 200px 200px var(--radius) var(--radius); overflow: hidden; background: var(--white); border: 6px solid rgba(201, 162, 74, .9); box-shadow: 0 40px 80px -30px rgba(0, 0, 0, .6); }
+.photo-frame { position: relative; border-radius: 200px 200px var(--radius) var(--radius); overflow: hidden; background: var(--navy-2); border: 6px solid rgba(201, 162, 74, .9); box-shadow: 0 40px 80px -30px rgba(0, 0, 0, .6); }
 .photo-frame img { width: 100%; height: auto; }
 .hero__photo::before { content: ""; position: absolute; inset: -22px -22px 22px 22px; border: 1px solid rgba(201, 162, 74, .35); border-radius: 210px 210px 24px 24px; z-index: -1; }
 .badge { position: absolute; background: var(--white); color: var(--navy); border-radius: 14px; padding: .7em 1em; box-shadow: var(--shadow); display: flex; align-items: center; gap: .6em; font-size: .8rem; line-height: 1.25; max-width: 210px; }
@@ -199,3 +199,8 @@ p { margin: 0 0 1em; }
   .badge { font-size: .72rem; padding: .5em .8em; }
   .badge strong { font-size: 1.3rem; }
 }
+
+/* About photo */
+.about__photo { margin: 2em 0 0; }
+.about__photo img { border-radius: var(--radius); box-shadow: var(--shadow); aspect-ratio: 3 / 2; object-fit: cover; width: 100%; }
+.about__photo figcaption { font-size: .82rem; color: var(--muted); margin-top: .7em; }
