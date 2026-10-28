@@ -19,7 +19,7 @@
   <link rel="icon" href="assets/img/favicon.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 
   <script type="application/ld+json">
@@ -49,16 +49,40 @@
 </head>
 <body>
 
+<!-- Icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></symbol>
+    <symbol id="i-bank" viewBox="0 0 24 24"><path d="M3 21h18M5 21V10M19 21V10M9.5 21V10M14.5 21V10M12 3 2 8h20z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/><path d="M22 10v6"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-5-5"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M12 20V10M18 20V4M6 20v-4"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.2a8.4 8.4 0 0 1-.9-3.8A8.5 8.5 0 0 1 12.5 3 8.5 8.5 0 0 1 21 11.5z"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="i-screen" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.2 13.9 7 23 12 20 17 23 15.8 13.9"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+  </defs>
+</svg>
+
 <header class="nav" id="top">
   <div class="container nav__inner">
-    <a href="#top" class="brand"><span class="brand__mark">SK</span><span>Saddam Khan</span></a>
+    <a href="#top" class="brand" aria-label="Saddam Khan, home">
+      <span class="brand__mark">SK</span>
+      <span class="brand__name">Saddam Khan</span>
+    </a>
     <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">☰</button>
     <nav class="nav__links">
-      <a href="#about">About</a>
+      <a href="#top" class="is-active">Home</a>
       <a href="#programs">Programs</a>
-      <a href="#who">Who I Train</a>
-      <a href="#experience">Experience</a>
+      <a href="#about">About</a>
       <a href="#highlights">Highlights</a>
+      <a href="#book">Contact</a>
       <a href="#book" class="btn btn--gold btn--sm">Book a Training</a>
     </nav>
   </div>
@@ -67,121 +91,126 @@
 <main>
   <!-- HERO -->
   <section class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
     <div class="container hero__grid">
       <div class="hero__text reveal">
-        <p class="eyebrow">Trainer · Educator · AI in Finance</p>
-        <h1>Bringing <em>Artificial Intelligence</em> to Bangladesh's classrooms, banks &amp; capital market.</h1>
-        <p class="lead">I'm <strong>Md Saddam Hossain Khan</strong>, Assistant Professor at BIBM and founder of Khan AI Lab. I run hands-on training that helps students, researchers and finance professionals use AI in their study, research and careers.</p>
+        <p class="eyebrow">AI &amp; Capital Market Trainer · Bangladesh</p>
+        <h1>Empowering Minds with AI &amp; Capital Market Expertise</h1>
+        <p class="lead">Practical, hands-on training for universities, banks and financial institutions, delivered by <strong>Md Saddam Hossain Khan</strong>, Assistant Professor at BIBM and Founder of Khan AI Lab.</p>
         <div class="hero__cta">
-          <a href="#book" class="btn btn--gold">Invite me to train your team</a>
-          <a href="https://wa.me/8801717059472?text=Hello%20Saddam%20sir%2C%20I%27d%20like%20to%20discuss%20a%20training%20program." class="btn btn--ghost" target="_blank" rel="noopener">WhatsApp me</a>
+          <a href="#book" class="btn btn--gold">Book a Training</a>
+          <a href="#programs" class="btn btn--ghost">Explore Programs</a>
         </div>
-        <ul class="hero__trust">
-          <li>BIBM</li><li>BASM · BSEC</li><li>SEBON · Nepal</li><li>Khan AI Lab</li>
-        </ul>
       </div>
-      <div class="hero__photo reveal">
-        <div class="photo-frame">
-          <img src="assets/img/saddam-khan.jpg" alt="Md Saddam Hossain Khan speaking at a capital market seminar" width="560" height="700">
-        </div>
-        <div class="badge badge--a"><strong>8+</strong><span>years in finance education</span></div>
-        <div class="badge badge--b"><strong>7</strong><span>universities trained</span></div>
+      <div class="hero__tiles reveal" aria-hidden="true">
+        <div class="hero__tile"><svg class="i"><use href="#i-cpu"/></svg><span>Artificial Intelligence</span></div>
+        <div class="hero__tile hero__tile--gold"><svg class="i"><use href="#i-trend"/></svg><span>Capital Markets</span></div>
+        <div class="hero__tile"><svg class="i"><use href="#i-bank"/></svg><span>Banking &amp; Finance</span></div>
       </div>
     </div>
   </section>
 
-  <!-- STATS -->
-  <section class="stats">
-    <div class="container stats__grid">
-      <div class="stat"><strong>8+</strong><span>Years teaching &amp; training</span></div>
-      <div class="stat"><strong>7</strong><span>Public &amp; private universities</span></div>
-      <div class="stat"><strong>2</strong><span>Regulator training academies</span></div>
-      <div class="stat"><strong>4</strong><span>Peer-reviewed publications</span></div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="section" id="about">
-    <div class="container about">
-      <div class="reveal">
-        <p class="eyebrow">About</p>
-        <h2>A trainer who speaks both <em>finance</em> and <em>AI</em>.</h2>
-        <figure class="about__photo">
-          <img src="assets/img/gallery/bu-capital-market-audience.jpg" alt="Md Saddam Hossain Khan addressing a packed auditorium of students and faculty" loading="lazy" width="1400" height="933">
-          <figcaption>Capital Market Insights seminar, Bangladesh University, June 2026</figcaption>
-        </figure>
-      </div>
-      <div class="about__body reveal">
-        <p>For over eight years I have taught and trained across universities, regulatory academies and the banking sector. At the <strong>Bangladesh Academy for Securities Markets (BASM)</strong>, the academic wing of BSEC, I trained CFOs, Independent Directors, Authorized Representatives of TREC holders, investors and university students. Today I serve as <strong>Assistant Professor and full-time trainer at the Bangladesh Institute of Bank Management (BIBM)</strong>.</p>
-        <p>As Founder &amp; CEO of <a href="https://khanailab.com/" target="_blank" rel="noopener">Khan AI Lab</a>, I build AI automation for financial data, research and education — so the tools I teach are tools I use every day. Participants leave my sessions with practical workflows they can apply the next morning, not just theory.</p>
-        <div class="chips">
-          <span>AI for Research</span><span>Prompt Engineering</span><span>AI in Banking</span><span>Capital Markets</span><span>Securities Regulation</span><span>Investment Analysis</span><span>R Programming</span><span>Curriculum Design</span>
-        </div>
-      </div>
+  <!-- FEATURE CARDS (overlap hero) -->
+  <section class="features">
+    <div class="container features__grid">
+      <article class="feature reveal">
+        <div class="feature__head"><svg class="i"><use href="#i-cap"/></svg><h3>Universities &amp; Students</h3></div>
+        <p>Seminars and workshops on using AI for study, research and future careers, and on how the capital market works.</p>
+        <a href="#programs" class="btn btn--outline btn--sm">Discover More</a>
+      </article>
+      <article class="feature reveal">
+        <div class="feature__head"><svg class="i i--gold"><use href="#i-bank"/></svg><h3>Banks &amp; Financial Institutions</h3></div>
+        <p>Applied AI for analysis, reporting and operations, plus capital market and regulatory training for professionals.</p>
+        <a href="#programs" class="btn btn--outline btn--outline-gold btn--sm">Discover More</a>
+      </article>
+      <article class="feature reveal">
+        <div class="feature__head"><svg class="i"><use href="#i-shield"/></svg><h3>Regulators &amp; Market Bodies</h3></div>
+        <p>Securities regulation, disclosure and governance programs, including international training for SEBON, Nepal.</p>
+        <a href="#programs" class="btn btn--outline btn--sm">Discover More</a>
+      </article>
     </div>
   </section>
 
   <!-- PROGRAMS -->
-  <section class="section section--tint" id="programs">
+  <section class="section" id="programs">
     <div class="container">
       <div class="section__head reveal">
-        <p class="eyebrow">Training Programs</p>
-        <h2>Workshops built for real outcomes</h2>
-        <p>Every program can be delivered as a 2-hour seminar, a full-day workshop or a multi-day certificate course, on-site or online.</p>
+        <h2>Training Programs</h2>
+        <p>Each program runs as a 2-hour seminar, a full-day workshop or a multi-day course, on-site or online.</p>
       </div>
-      <div class="cards">
-        <article class="card reveal">
-          <div class="card__icon">🎓</div>
-          <h3>AI for Study &amp; Academic Success</h3>
-          <p>How students can use ChatGPT, Claude, Gemini and other tools responsibly to learn faster, write better and avoid plagiarism pitfalls.</p>
-          <span class="card__tag">Universities · Students</span>
+      <div class="solutions">
+        <article class="solution reveal">
+          <div class="solution__img"><img src="assets/img/gallery/sust-session.jpg" alt="Students at a workshop" loading="lazy"><span class="solution__badge"><svg class="i"><use href="#i-cap"/></svg></span></div>
+          <div class="solution__body">
+            <h3>AI for Study &amp; Academic Success</h3>
+            <p>How students can use ChatGPT, Claude, Gemini and other tools responsibly to learn faster, write better and avoid plagiarism pitfalls.</p>
+            <a href="#book" class="btn btn--gold btn--sm" data-topic="AI for Study &amp; Academic Success">Enquire</a>
+          </div>
         </article>
-        <article class="card reveal">
-          <div class="card__icon">🔬</div>
-          <h3>AI in Business &amp; Academic Research</h3>
-          <p>Literature review, research design, data collection, analysis and writing — an AI-assisted research workflow for faculty and graduate researchers, as delivered to the EMBA program at Jahangirnagar University.</p>
-          <span class="card__tag">Faculty · Researchers</span>
+        <article class="solution reveal">
+          <div class="solution__img"><img src="assets/img/gallery/ju-ai-seminar-presenting.jpg" alt="Presenting an AI research workflow at Jahangirnagar University" loading="lazy"><span class="solution__badge solution__badge--gold"><svg class="i"><use href="#i-search"/></svg></span></div>
+          <div class="solution__body">
+            <h3>AI in Business &amp; Academic Research</h3>
+            <p>Literature review, research design, data collection, analysis and writing: an AI-assisted research workflow, as delivered to the EMBA program at Jahangirnagar University.</p>
+            <a href="#book" class="btn btn--gold btn--sm" data-topic="AI in Business &amp; Academic Research">Enquire</a>
+          </div>
         </article>
-        <article class="card reveal">
-          <div class="card__icon">🏦</div>
-          <h3>AI for Banks &amp; Financial Institutions</h3>
-          <p>Applying AI to credit analysis, reporting, compliance, customer service and operations — with a clear view of risk, governance and data privacy.</p>
-          <span class="card__tag">Banks · NBFIs · Insurers</span>
+        <article class="solution reveal">
+          <div class="solution__img"><img src="assets/img/gallery/ju-ai-seminar-audience.jpg" alt="Working professionals in a training session" loading="lazy"><span class="solution__badge"><svg class="i"><use href="#i-bank"/></svg></span></div>
+          <div class="solution__body">
+            <h3>AI for Banks &amp; Financial Institutions</h3>
+            <p>Applying AI to credit analysis, reporting, compliance, customer service and operations, with a clear view of risk, governance and data privacy.</p>
+            <a href="#book" class="btn btn--gold btn--sm" data-topic="AI for Banks &amp; Financial Institutions">Enquire</a>
+          </div>
         </article>
-        <article class="card reveal">
-          <div class="card__icon">📈</div>
-          <h3>Capital Market Fundamentals</h3>
-          <p>Instruments, market microstructure, investment analysis and career pathways in the securities industry — the program delivered across seven universities.</p>
-          <span class="card__tag">Students · New investors</span>
+        <article class="solution reveal">
+          <div class="solution__img"><img src="assets/img/gallery/just-podium.jpg" alt="Capital market workshop at JUST" loading="lazy" style="object-position: left center"><span class="solution__badge solution__badge--gold"><svg class="i"><use href="#i-chart"/></svg></span></div>
+          <div class="solution__body">
+            <h3>Capital Market Fundamentals</h3>
+            <p>Instruments, IPOs, market microstructure, investment analysis and career pathways in the securities industry.</p>
+            <a href="#book" class="btn btn--gold btn--sm" data-topic="Capital Market Fundamentals">Enquire</a>
+          </div>
         </article>
-        <article class="card reveal">
-          <div class="card__icon">⚖️</div>
-          <h3>Securities Regulation &amp; Governance</h3>
-          <p>Disclosure obligations, corporate governance and regulatory compliance for CFOs, Independent Directors and TREC holder representatives.</p>
-          <span class="card__tag">Listed companies · Brokers</span>
+        <article class="solution reveal">
+          <div class="solution__img"><img src="assets/img/gallery/sebon-certificate-1.jpg" alt="Training program for SEBON officials" loading="lazy"><span class="solution__badge"><svg class="i"><use href="#i-shield"/></svg></span></div>
+          <div class="solution__body">
+            <h3>Securities Regulation &amp; Governance</h3>
+            <p>Disclosure obligations, corporate governance and regulatory compliance for CFOs, Independent Directors, TREC representatives and regulators.</p>
+            <a href="#book" class="btn btn--gold btn--sm" data-topic="Securities Regulation &amp; Governance">Enquire</a>
+          </div>
         </article>
-        <article class="card reveal">
-          <div class="card__icon">🤖</div>
-          <h3>AI Automation &amp; Future Careers</h3>
-          <p>Automation workflows, prompt engineering and AI-assisted analytics — plus the skills graduates need to stay valuable in an AI-driven job market.</p>
-          <span class="card__tag">Graduates · Entrepreneurs</span>
+        <article class="solution reveal">
+          <div class="solution__img"><img src="assets/img/gallery/bu-capital-market-speaking.jpg" alt="Speaking on stage at Bangladesh University" loading="lazy" style="object-position: center 30%"><span class="solution__badge solution__badge--gold"><svg class="i"><use href="#i-zap"/></svg></span></div>
+          <div class="solution__body">
+            <h3>AI Automation &amp; Future Careers</h3>
+            <p>Automation workflows, prompt engineering and AI-assisted analytics, plus the skills graduates need in an AI-driven job market.</p>
+            <a href="#book" class="btn btn--gold btn--sm" data-topic="AI Automation &amp; Future Careers">Enquire</a>
+          </div>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- WHO I TRAIN -->
-  <section class="section" id="who">
-    <div class="container">
-      <div class="section__head reveal">
-        <p class="eyebrow">Who I Train</p>
-        <h2>One trainer, four audiences</h2>
+  <!-- ABOUT -->
+  <section class="section section--tint" id="about">
+    <div class="container about">
+      <div class="about__photo reveal">
+        <img src="assets/img/saddam-khan.jpg" alt="Md Saddam Hossain Khan speaking at a capital market seminar" width="560" height="700" loading="lazy">
+        <div class="about__badge"><strong>8+</strong><span>years in finance education</span></div>
       </div>
-      <div class="who">
-        <div class="who__item reveal"><h3>Banks</h3><p>Officers and managers building AI-driven analysis and automation skills for daily work.</p></div>
-        <div class="who__item reveal"><h3>Financial Institutions</h3><p>Brokerage houses, asset managers, NBFIs and listed companies navigating markets and regulation.</p></div>
-        <div class="who__item reveal"><h3>Public Universities</h3><p>Departments, business clubs and research cells seeking seminars on AI and the capital market.</p></div>
-        <div class="who__item reveal"><h3>Private Universities</h3><p>Students and faculty preparing for AI-enabled study, research and careers.</p></div>
+      <div class="about__body reveal">
+        <h2>A trainer who speaks both finance and AI</h2>
+        <p>For over eight years I have taught and trained across universities, regulatory academies and the banking sector. At the <strong>Bangladesh Academy for Securities Markets (BASM)</strong>, the academic wing of BSEC, I trained CFOs, Independent Directors, Authorized Representatives of TREC holders, investors and university students. Today I serve as <strong>Assistant Professor and full-time trainer at the Bangladesh Institute of Bank Management (BIBM)</strong>.</p>
+        <p>As Founder &amp; CEO of <a href="https://khanailab.com/" target="_blank" rel="noopener">Khan AI Lab</a>, I build AI automation for financial data, research and education, so the tools I teach are tools I use every day. Participants leave with practical workflows they can apply the next morning.</p>
+        <div class="stats">
+          <div><strong>8+</strong><span>Years teaching &amp; training</span></div>
+          <div><strong>7+</strong><span>Universities trained</span></div>
+          <div><strong>2</strong><span>Regulator academies</span></div>
+          <div><strong>4</strong><span>Publications</span></div>
+        </div>
+        <div class="chips">
+          <span>AI for Research</span><span>Prompt Engineering</span><span>AI in Banking</span><span>Capital Markets</span><span>Securities Regulation</span><span>Investment Analysis</span><span>R Programming</span><span>Curriculum Design</span>
+        </div>
       </div>
     </div>
   </section>
@@ -363,41 +392,41 @@
     </div>
   </section>
 
-  <!-- BOOK -->
-  <section class="section section--dark" id="book">
+  <!-- HOW I WORK + BOOK -->
+  <section class="section" id="book">
     <div class="container book">
-      <div class="reveal">
-        <p class="eyebrow">Book a Training</p>
-        <h2>Let's plan a session for your institution.</h2>
-        <p>Tell me about your audience and goals. I'll reply with a tailored outline, duration and format.</p>
-        <ul class="book__contact">
-          <li><span>Phone / WhatsApp</span><a href="tel:+8801717059472">+880 1717-059472</a></li>
-          <li><span>Based in</span>Dhaka, Bangladesh — available nationwide &amp; online</li>
-          <li><span>Company</span><a href="https://khanailab.com/" target="_blank" rel="noopener">khanailab.com</a></li>
+      <div class="book__how reveal">
+        <h2>How I Work</h2>
+        <p>Every program is shaped around your audience, so participants get training that fits their level and goals.</p>
+        <ol class="steps">
+          <li><span class="steps__icon"><svg class="i"><use href="#i-chat"/></svg></span><strong>Initial Discussion</strong><span>Your audience, goals and format</span></li>
+          <li><span class="steps__icon"><svg class="i"><use href="#i-target"/></svg></span><strong>Tailored Design</strong><span>An outline built for your team</span></li>
+          <li><span class="steps__icon steps__icon--gold"><svg class="i"><use href="#i-screen"/></svg></span><strong>Hands-on Delivery</strong><span>Live demos and practice</span></li>
+          <li><span class="steps__icon"><svg class="i"><use href="#i-award"/></svg></span><strong>Follow-up</strong><span>Resources and next steps</span></li>
+        </ol>
+        <ul class="contact">
+          <li><svg class="i"><use href="#i-phone"/></svg><div><span>Phone / WhatsApp</span><a href="tel:+8801717059472">+880 1717-059472</a></div></li>
+          <li><svg class="i"><use href="#i-pin"/></svg><div><span>Based in</span>Dhaka, Bangladesh. Available nationwide &amp; online</div></li>
+          <li><svg class="i"><use href="#i-globe"/></svg><div><span>Company</span><a href="https://khanailab.com/" target="_blank" rel="noopener">khanailab.com</a></div></li>
         </ul>
       </div>
       <form class="form reveal" id="bookForm">
-        <label>Your name<input name="name" required autocomplete="name"></label>
-        <label>Institution<input name="org" required placeholder="e.g. ABC Bank / XYZ University"></label>
-        <div class="form__row">
-          <label>Institution type
-            <select name="type">
-              <option>Bank</option><option>Financial Institution</option><option>Public University</option><option>Private University</option><option>Corporate / Other</option>
-            </select>
-          </label>
-          <label>Topic
-            <select name="topic">
-              <option>AI for Study &amp; Academic Success</option><option>AI in Business &amp; Academic Research</option><option>AI for Banks &amp; Financial Institutions</option><option>Capital Market Fundamentals</option><option>Securities Regulation &amp; Governance</option><option>AI Automation &amp; Future Careers</option><option>Custom program</option>
-            </select>
-          </label>
+        <h2>Book Your Training Session</h2>
+        <div class="form__grid">
+          <input name="name" required autocomplete="name" placeholder="Your name" aria-label="Your name">
+          <input name="org" required placeholder="Institution" aria-label="Institution">
+          <select name="type" aria-label="Institution type">
+            <option>Bank</option><option>Financial Institution</option><option>Public University</option><option>Private University</option><option>Corporate / Other</option>
+          </select>
+          <select name="topic" aria-label="Topic">
+            <option>AI for Study &amp; Academic Success</option><option>AI in Business &amp; Academic Research</option><option>AI for Banks &amp; Financial Institutions</option><option>Capital Market Fundamentals</option><option>Securities Regulation &amp; Governance</option><option>AI Automation &amp; Future Careers</option><option>Custom program</option>
+          </select>
+          <input name="size" inputmode="numeric" placeholder="Participants (approx.)" aria-label="Number of participants">
+          <input name="date" type="text" placeholder="Preferred date" aria-label="Preferred date" onfocus="this.type='date'">
+          <textarea name="msg" rows="4" placeholder="Message: goals, format (on-site/online), duration" aria-label="Message" class="form__full"></textarea>
         </div>
-        <div class="form__row">
-          <label>Participants (approx.)<input name="size" inputmode="numeric" placeholder="e.g. 60"></label>
-          <label>Preferred date<input name="date" type="date"></label>
-        </div>
-        <label>Message<textarea name="msg" rows="3" placeholder="Goals, format (on-site/online), duration…"></textarea></label>
-        <button class="btn btn--gold btn--block" type="submit">Send enquiry via WhatsApp</button>
-        <p class="form__note">Opens WhatsApp with your details filled in — just press send.</p>
+        <button class="btn btn--gold btn--block" type="submit">Send Enquiry via WhatsApp</button>
+        <p class="form__note">Opens WhatsApp with your details filled in. Just press send.</p>
       </form>
     </div>
   </section>
@@ -405,8 +434,9 @@
 
 <footer class="footer">
   <div class="container footer__inner">
+    <a href="#top" class="brand"><span class="brand__mark">SK</span><span class="brand__name">Saddam Khan</span></a>
     <p>© <span id="year"></span> Md Saddam Hossain Khan · AI &amp; Capital Market Trainer · Dhaka, Bangladesh</p>
-    <a href="#top">Back to top ↑</a>
+    <a href="#top" class="footer__top">Back to top ↑</a>
   </div>
 </footer>
 

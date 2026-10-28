@@ -64,3 +64,23 @@ document.querySelectorAll('.album__item').forEach(item => item.addEventListener(
 }));
 lightbox.addEventListener('click', e => { if (e.target !== lbImg) lightbox.hidden = true; });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') lightbox.hidden = true; });
+
+// Program "Enquire" buttons pre-select their topic in the booking form
+const topicSelect = document.querySelector('#bookForm select[name="topic"]');
+document.querySelectorAll('[data-topic]').forEach(btn => btn.addEventListener('click', () => {
+  topicSelect.value = btn.dataset.topic;
+}));
+
+// Highlight the nav link for the section in view
+const navLinks = [...links.querySelectorAll('a:not(.btn)')];
+const spy = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const id = e.target.classList.contains('hero') ? '#top' : `#${e.target.id}`;
+    navLinks.forEach(a => a.classList.toggle('is-active', a.getAttribute('href') === id));
+  });
+}, { rootMargin: '-45% 0px -50% 0px' });
+['top', 'programs', 'about', 'highlights', 'book'].forEach(id => {
+  const el = document.getElementById(id === 'top' ? 'top' : id);
+  if (el) spy.observe(id === 'top' ? document.querySelector('.hero') : el);
+});
