@@ -50,3 +50,17 @@ document.getElementById('bookForm').addEventListener('submit', e => {
 });
 
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// Album lightbox
+const lightbox = document.getElementById('lightbox');
+const lbImg = lightbox.querySelector('img');
+const lbCap = lightbox.querySelector('.lightbox__caption');
+document.querySelectorAll('.album__item').forEach(item => item.addEventListener('click', () => {
+  const img = item.querySelector('img');
+  lbImg.src = img.src;
+  lbImg.alt = img.alt;
+  lbCap.textContent = item.querySelector('figcaption').textContent;
+  lightbox.hidden = false;
+}));
+lightbox.addEventListener('click', e => { if (e.target !== lbImg) lightbox.hidden = true; });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') lightbox.hidden = true; });

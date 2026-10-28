@@ -204,3 +204,32 @@ p { margin: 0 0 1em; }
 .about__photo { margin: 2em 0 0; }
 .about__photo img { border-radius: var(--radius); box-shadow: var(--shadow); aspect-ratio: 3 / 2; object-fit: cover; width: 100%; }
 .about__photo figcaption { font-size: .82rem; color: var(--muted); margin-top: .7em; }
+
+/* Gallery tile link */
+.tile__link { position: absolute; inset: 0; z-index: 2; }
+
+/* Event album */
+.album { margin-top: 70px; padding-top: 50px; border-top: 1px solid var(--line); }
+.album__head { max-width: 760px; margin-bottom: 28px; }
+.album__head h3 { font-size: clamp(1.3rem, 2.4vw, 1.7rem); }
+.album__head p:not(.eyebrow) { color: var(--muted); }
+.album__grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 200px; gap: 14px; }
+.album__item { margin: 0; position: relative; border-radius: 14px; overflow: hidden; cursor: zoom-in; background: var(--navy); }
+.album__item--lead { grid-column: span 2; grid-row: span 2; }
+.album__item img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.album__item:hover img { transform: scale(1.05); }
+.album__item figcaption { position: absolute; inset: auto 0 0; padding: 30px 14px 12px; font-size: .82rem; font-weight: 500; color: var(--white); background: linear-gradient(to top, rgba(11, 26, 51, .85), transparent); }
+
+/* Lightbox */
+.lightbox { position: fixed; inset: 0; z-index: 100; background: rgba(7, 18, 42, .94); display: grid; place-items: center; align-content: center; gap: 14px; padding: 20px; }
+.lightbox[hidden] { display: none; }
+.lightbox img { max-width: min(1200px, 100%); max-height: 80vh; border-radius: 10px; }
+.lightbox__caption { color: var(--white); margin: 0; text-align: center; }
+.lightbox__close { position: absolute; top: 14px; right: 18px; background: none; border: 0; color: var(--white); font-size: 2.4rem; cursor: pointer; line-height: 1; }
+
+@media (max-width: 860px) {
+  .album__grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 160px; }
+}
+@media (max-width: 560px) {
+  .album__grid { grid-auto-rows: 130px; gap: 10px; }
+}
