@@ -238,3 +238,4 @@ p { margin: 0 0 1em; }
   .album__grid { grid-auto-rows: 130px; gap: 10px; }
   .album__grid--2 { grid-template-columns: 1fr; grid-auto-rows: 220px; }
 }
+.album__item--top img { object-position: center 35%; }
